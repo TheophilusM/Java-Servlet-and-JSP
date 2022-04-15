@@ -93,4 +93,6 @@
 		- `<%page errorPage=error.jsp%>` - call error page
 		- `<%page isErrorPage=tru%>` - in error page
 		- `<%= exception %>`
-* 
+* JDBC
+	- databse
+	- using a Maven project
