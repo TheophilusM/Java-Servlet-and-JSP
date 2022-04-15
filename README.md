@@ -87,3 +87,10 @@
 	- response (HttpServletResponse)
 	- application (ServletContext)
 	- servlet (ServletConfig)
+* Exception in JSP
+	- try/catch block
+	- error JSP page 
+		- `<%page errorPage=error.jsp%>` - call error page
+		- `<%page isErrorPage=tru%>` - in error page
+		- `<%= exception %>`
+* 
