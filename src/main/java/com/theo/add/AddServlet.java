@@ -8,12 +8,14 @@ import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+@WebServlet("/add") // using annotations
 public class AddServlet extends HttpServlet {
 	//	work with post or get method
 	/*
@@ -85,23 +87,28 @@ public class AddServlet extends HttpServlet {
 		res.sendRedirect("sq");
 
 	} 
-	*/
+	
 	// access xml file configurations
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
 		PrintWriter outObj =  res.getWriter();
 		outObj.println("Hi");
 		
 		// get xml gloabal values
-		/*
 		ServletContext servletContext = getServletContext();
 		String name = servletContext.getInitParameter("name");
 		outObj.println(name);
-		*/
 		
 		// get xml local values
 		ServletConfig servletConfig = getServletConfig();
 		String name = servletConfig.getInitParameter("name");
 		outObj.println(name);
+		
+	}
+	*/
+	// use annotations instead of xml file
+	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
+		PrintWriter outObj =  res.getWriter();
+		
 		
 	}
 }

@@ -47,6 +47,8 @@
 * ServletContext interface
 	- limited to specific servlets
 	- <init-param>
+* Annotations
+	- to configure servlets 
 	
 	
 	
