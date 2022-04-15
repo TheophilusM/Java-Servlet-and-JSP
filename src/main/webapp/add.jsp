@@ -6,7 +6,7 @@
 <meta charset="ISO-8859-1">
 <title>JSP</title>
 </head>
-<body bgcolor='rgba(0,0,0,0.1)'>
+<body bgcolor='rgba(0,0,255,0.03)'>
 	<%
 		int a = Integer.parseInt(request.getParameter("num1"));
 		int b = Integer.parseInt(request.getParameter("num2"));

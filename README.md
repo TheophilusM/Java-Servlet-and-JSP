@@ -55,3 +55,16 @@
 	
 ### **JSP**
 * to allow writing of java code in html
+* it is converted to a servlet when run
+* Scriptlet tag 
+	- `<% ... %>` 
+	- _For content within a Servlet method_
+* Declaration tag
+	- `<%! ... %>`
+	- _For defining instance variables_
+* Directive tag
+	- `<%@page .., ... %>` tag 
+	- _For imports_
+* Expression tag
+	- `<%=k ... %>`
+	- _To print something_
