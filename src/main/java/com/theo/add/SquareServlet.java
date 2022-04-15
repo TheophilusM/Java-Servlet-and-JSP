@@ -11,11 +11,12 @@ public class SquareServlet extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
 		PrintWriter outObj =  res.getWriter();
 		outObj.println("Running another servlet");
+		outObj.println();
 		
 		// access a passed attribute and cast object to required attribute
 		int result = (int) req.getAttribute("valueToPass");
 		
 		int sqResult = result * result;
-		System.out.println("Square Result: " + result);
+		outObj.println("Square Result: " + sqResult);
 	}
 }
