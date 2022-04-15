@@ -6,6 +6,9 @@
 * Annotations - WebServlet
 * JSP - Java Server Pages
 * Sessions, Cookies, URL redirects
+* IDEs 
+	- Eclipse
+	- Netbeans
 
 ### **Java Servlet notes**
 * Static vs Dynamic request
@@ -64,6 +67,12 @@
 	- _For defining instance variables_
 * Directive tag
 	- `<%@page .., ... %>` tag 
+	- @page
+		- `attribute="value"`
+		- language, import, extends, session, autoFlush, contentType, errorPage, isErrorPage, info, isELIgnored, isThreadSafe ...
+		
+	- @include
+	- @taglib
 	- _For imports_
 * Expression tag
 	- `<%=k ... %>`
