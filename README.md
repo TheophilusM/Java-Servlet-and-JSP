@@ -79,3 +79,11 @@
 * Expression tag
 	- `<%=k ... %>`
 	- _To print something_
+* Implicit object
+	- request (HttpServletRequest)
+	- session (HttpSession)
+	- out (JspWritter)
+	- pageContext (PageContext)
+	- response (HttpServletResponse)
+	- application (ServletContext)
+	- servlet (ServletConfig)
