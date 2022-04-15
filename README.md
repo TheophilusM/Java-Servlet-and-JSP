@@ -54,4 +54,4 @@
 	- to configure servlets 
 	
 ### **JSP**
-* 
+* to allow writing of java code in html
