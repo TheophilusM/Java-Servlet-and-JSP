@@ -41,10 +41,12 @@
 	- Cookies
 	- URL Redirecting
 * HttpSession Cookies
-* ServletConfig
-	- 
-* ServletContext
-
+* ServletConfig interface
+	- shared buy all servlets
+	- <context-param>
+* ServletContext interface
+	- limited to specific servlets
+	- <init-param>
 	
 	
 	

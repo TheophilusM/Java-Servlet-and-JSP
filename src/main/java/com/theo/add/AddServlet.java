@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 import java.net.HttpCookie;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
@@ -85,15 +86,22 @@ public class AddServlet extends HttpServlet {
 
 	} 
 	*/
-	// access xml file configs
+	// access xml file configurations
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
 		PrintWriter outObj =  res.getWriter();
 		outObj.println("Hi");
 		
-		// get xml values
+		// get xml gloabal values
+		/*
 		ServletContext servletContext = getServletContext();
 		String name = servletContext.getInitParameter("name");
 		outObj.println(name);
-				
+		*/
+		
+		// get xml local values
+		ServletConfig servletConfig = getServletConfig();
+		String name = servletConfig.getInitParameter("name");
+		outObj.println(name);
+		
 	}
 }

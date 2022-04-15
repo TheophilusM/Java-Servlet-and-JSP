@@ -4,6 +4,11 @@
   <servlet>
   	<servlet-name>servletName</servlet-name>
   	<servlet-class>com.theo.add.AddServlet</servlet-class>
+  	
+  	<init-param>
+  		<param-name>name</param-name>
+  		<param-value>Taku</param-value>
+  	</init-param>
   </servlet>
   <servlet-mapping>
   	<servlet-name>servletName</servlet-name>
@@ -27,4 +32,6 @@
   	<param-name>phone</param-name>
   	<param-value>Samsung S8</param-value>
   </context-param>
+  
+  
 </web-app>
