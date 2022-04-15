@@ -42,6 +42,7 @@ public class AddServlet extends HttpServlet {
 		int b = Integer.parseInt(req.getParameter("num2"));
 		
 		int result = a + b;
+		/*
 		// to print result in console
 		System.out.println("Result: " + result);
 		
@@ -51,7 +52,6 @@ public class AddServlet extends HttpServlet {
 		
 		// to send to a servlet on same domain
 		
-		/*
 		// session management to share data between servlets
 		req.setAttribute("valueToPass", result);
 		
@@ -60,8 +60,8 @@ public class AddServlet extends HttpServlet {
 		requestDispatcher.forward(req, res);
 		*/
 		
-		// to send to a servlet on different domain
-		res.sendRedirect("sq");
+		// to send to a servlet on different domain and pass a value
+		res.sendRedirect("sq?valueToPass="+result);
 		
 	} 
 }
