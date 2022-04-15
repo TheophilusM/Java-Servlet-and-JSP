@@ -77,9 +77,10 @@ public class AddServlet extends HttpServlet {
 		
 		// Cookies
 		Cookie cookie = new Cookie("valueToPass", result + ""); 	// param as string
+		res.addCookie(cookie);
 		
 		// cookie redirect
-		res.addCookie(cookie);
+		res.sendRedirect("sq");
 
 	} 
 }

@@ -5,7 +5,6 @@
   	<servlet-name>servletName</servlet-name>
   	<servlet-class>com.theo.add.AddServlet</servlet-class>
   </servlet>
-  
   <servlet-mapping>
   	<servlet-name>servletName</servlet-name>
   	<url-pattern>/add</url-pattern>
@@ -14,10 +13,18 @@
   <servlet>
   	<servlet-name>servletName2</servlet-name>
   	<servlet-class>com.theo.add.SquareServlet</servlet-class>
-  </servlet>
-  
+  </servlet> 
   <servlet-mapping>
   	<servlet-name>servletName2</servlet-name>
   	<url-pattern>/sq</url-pattern>
   </servlet-mapping>
+  
+  <context-param>
+  	<param-name>name</param-name>
+  	<param-value>Theo</param-value>
+  </context-param>
+  <context-param>
+  	<param-name>phone</param-name>
+  	<param-value>Samsung S8</param-value>
+  </context-param>
 </web-app>

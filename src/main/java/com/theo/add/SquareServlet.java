@@ -40,10 +40,10 @@ public class SquareServlet extends HttpServlet {
 		int cookieValue = 0;
 		Cookie cookies[] = req.getCookies();
 		for(Cookie cookie : cookies) {
-			if (cookie.getName() == "valueToPass") {
+			if (cookie.getName().equals("valueToPass")) {
 				cookieValue = Integer.parseInt(cookie.getValue());
-				outObj.println("Cookie param: " + cookieValue);
 			}
 		}
+		outObj.println("Cookie square: " + cookieValue*cookieValue);
 	}
 }
