@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 import java.net.HttpCookie;
 
 import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
@@ -40,12 +41,13 @@ public class AddServlet extends HttpServlet {
 	}
 	*/
 	// only work with get request
+	/*
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
 		int a = Integer.parseInt(req.getParameter("num1"));
 		int b = Integer.parseInt(req.getParameter("num2"));
 		
 		int result = a + b;
-		/*
+		
 		// to print result in console
 		System.out.println("Result: " + result);
 		
@@ -73,7 +75,6 @@ public class AddServlet extends HttpServlet {
 		
 		// session redirect
 		res.sendRedirect("sq");
-		 */
 		
 		// Cookies
 		Cookie cookie = new Cookie("valueToPass", result + ""); 	// param as string
@@ -83,4 +84,16 @@ public class AddServlet extends HttpServlet {
 		res.sendRedirect("sq");
 
 	} 
+	*/
+	// access xml file configs
+	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
+		PrintWriter outObj =  res.getWriter();
+		outObj.println("Hi");
+		
+		// get xml values
+		ServletContext servletContext = getServletContext();
+		String name = servletContext.getInitParameter("name");
+		outObj.println(name);
+				
+	}
 }
