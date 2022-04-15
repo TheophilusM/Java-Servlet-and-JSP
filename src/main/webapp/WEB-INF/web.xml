@@ -10,4 +10,14 @@
   	<servlet-name>servletName</servlet-name>
   	<url-pattern>/add</url-pattern>
   </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>servletName2</servlet-name>
+  	<servlet-class>com.theo.add.SquareServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>servletName2</servlet-name>
+  	<url-pattern>/sq</url-pattern>
+  </servlet-mapping>
 </web-app>

@@ -42,12 +42,17 @@ public class AddServlet extends HttpServlet {
 		int b = Integer.parseInt(req.getParameter("num2"));
 		
 		int result = a + b;
+		// to print result in console
 		System.out.println("Result: " + result);
 		
+		// to print result on browser
 		PrintWriter outObj =  res.getWriter();
 		outObj.println("Result: " + result);
 		
-		// call a servlet using either req dispatcger or redirect
+		// session management to share data between servlets
+		req.setAttribute("valueToPass", result);
+		
+		// call a servlet using either req dispatcher or redirect
 		RequestDispatcher requestDispatcher = req.getRequestDispatcher("sq");
 		requestDispatcher.forward(req, res);
 		
