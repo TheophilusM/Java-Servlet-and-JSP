@@ -93,6 +93,28 @@
 		- `<%page errorPage=error.jsp%>` - call error page
 		- `<%page isErrorPage=tru%>` - in error page
 		- `<%= exception %>`
-* JDBC
-	- databse
-	- using a Maven project
+## **JDBC**
+* Steps
+	- import java.sql.* package
+	- load and register the DBMS driver
+		- url
+		- username
+		- password
+		- connect
+		- execute a sql query
+		- access response
+## **MVC**
+* Model 
+	- Pojo - plain old java object
+	- Object containing requested data
+* View 
+	- JSP
+	- display data
+* Controller 
+	- Servlet
+	- handle requests and process them
+	- send model object to  view
+	- N-tier architecture
+		- Service classes called to perform other operations  such as fetching data
+		- DAO class (Data Access Object) layer
+		
