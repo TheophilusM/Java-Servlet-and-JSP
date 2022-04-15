@@ -3,6 +3,8 @@ package com.theo.add;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
+import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -35,7 +37,7 @@ public class AddServlet extends HttpServlet {
 	}
 	*/
 	// only work with get request
-	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
+	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException, ServletException {
 		int a = Integer.parseInt(req.getParameter("num1"));
 		int b = Integer.parseInt(req.getParameter("num2"));
 		
@@ -44,5 +46,10 @@ public class AddServlet extends HttpServlet {
 		
 		PrintWriter outObj =  res.getWriter();
 		outObj.println("Result: " + result);
+		
+		// call a servlet using either req dispatcger or redirect
+		RequestDispatcher requestDispatcher = req.getRequestDispatcher("sq");
+		requestDispatcher.forward(req, res);
+		
 	} 
 }
