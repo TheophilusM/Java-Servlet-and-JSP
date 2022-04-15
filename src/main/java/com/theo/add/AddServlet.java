@@ -49,12 +49,19 @@ public class AddServlet extends HttpServlet {
 		PrintWriter outObj =  res.getWriter();
 		outObj.println("Result: " + result);
 		
+		// to send to a servlet on same domain
+		
+		/*
 		// session management to share data between servlets
 		req.setAttribute("valueToPass", result);
 		
 		// call a servlet using either req dispatcher or redirect
 		RequestDispatcher requestDispatcher = req.getRequestDispatcher("sq");
 		requestDispatcher.forward(req, res);
+		*/
+		
+		// to send to a servlet on different domain
+		res.sendRedirect("sq");
 		
 	} 
 }
