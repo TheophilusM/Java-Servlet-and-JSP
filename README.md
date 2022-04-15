@@ -70,9 +70,11 @@
 	- @page
 		- `attribute="value"`
 		- language, import, extends, session, autoFlush, contentType, errorPage, isErrorPage, info, isELIgnored, isThreadSafe ...
-		
 	- @include
+		- import another jsp file
 	- @taglib
+		- to use external tags
+		uri and prefix
 	- _For imports_
 * Expression tag
 	- `<%=k ... %>`
