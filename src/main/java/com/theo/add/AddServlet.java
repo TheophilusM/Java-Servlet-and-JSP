@@ -2,18 +2,18 @@ package com.theo.add;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.net.HttpCookie;
+//import java.net.HttpCookie;
 
-import javax.servlet.RequestDispatcher;
+//import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletConfig;
-import javax.servlet.ServletContext;
-import javax.servlet.ServletException;
+//import javax.servlet.ServletContext;
+//import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.Cookie;
+//import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
+//import javax.servlet.http.HttpSession;
 
 @WebServlet("/add") // using annotations
 public class AddServlet extends HttpServlet {
@@ -94,6 +94,7 @@ public class AddServlet extends HttpServlet {
 		outObj.println("Hi");
 		
 		// get xml gloabal values
+
 		ServletContext servletContext = getServletContext();
 		String name = servletContext.getInitParameter("name");
 		outObj.println(name);
@@ -104,11 +105,19 @@ public class AddServlet extends HttpServlet {
 		outObj.println(name);
 		
 	}
-	*/
-	// use annotations instead of xml file
+*/
+	
+	//	passing html tags
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
+		int a = Integer.parseInt(req.getParameter("num1"));
+		int b = Integer.parseInt(req.getParameter("num2"));
+		
+		int result = a + b;
+		System.out.println("Result: " + result);
+		
 		PrintWriter outObj =  res.getWriter();
-		
-		
+		outObj.println("<html><body bgcolor='cyan'>");
+		outObj.println("Result: " + result);
+		outObj.println("</html></body>");
 	}
 }

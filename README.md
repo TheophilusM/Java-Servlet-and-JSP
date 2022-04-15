@@ -3,6 +3,9 @@
 * Servlet classes
 * HTML pages
 * web.xml configurations
+* Annotations - WebServlet
+* JSP - Java Server Pages
+* Sessions, Cookies, URL redirects
 
 ### **Java Servlet notes**
 * Static vs Dynamic request
@@ -50,6 +53,5 @@
 * Annotations
 	- to configure servlets 
 	
-	
-	
-	
+### **JSP**
+* 
