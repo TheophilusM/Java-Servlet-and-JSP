@@ -6,10 +6,12 @@ import java.io.PrintWriter;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class SquareServlet extends HttpServlet {
 	public void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
 		PrintWriter outObj =  res.getWriter();
+		HttpSession httpSession = req.getSession();
 		/*
 		outObj.println("Running another servlet");
 		System.out.println("Running another servlet");
@@ -20,10 +22,14 @@ public class SquareServlet extends HttpServlet {
 		
 		int sqResult = result * result;
 		outObj.println("Square Result: " + sqResult);
-		*/
 		
-		// get parameter
+		// get parameter for url redirect
 		int param = Integer.parseInt(req.getParameter("valueToPass"));
 		outObj.println("Parameter: " + param);
+		 */
+		
+		// get parameter for session
+		int param = (int) httpSession.getAttribute("valueToPass");
+		outObj.println("Session param: " + param);
 	}
 }

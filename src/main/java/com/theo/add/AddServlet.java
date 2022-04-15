@@ -2,12 +2,15 @@ package com.theo.add;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.net.HttpCookie;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 public class AddServlet extends HttpServlet {
 	//	work with post or get method
@@ -58,10 +61,25 @@ public class AddServlet extends HttpServlet {
 		// call a servlet using either req dispatcher or redirect
 		RequestDispatcher requestDispatcher = req.getRequestDispatcher("sq");
 		requestDispatcher.forward(req, res);
-		*/
 		
 		// to send to a servlet on different domain and pass a value
+		
+		// URL redirect
 		res.sendRedirect("sq?valueToPass="+result);
 		
+		// Sessions
+		HttpSession httpSession = req.getSession();
+		httpSession.setAttribute("valueToPass", result);
+		
+		// session redirect
+		res.sendRedirect("sq");
+		 */
+		
+		// Cookies
+		Cookie cookie = new Cookie("valueToPass", result + ""); 	// param as string
+		
+		// cookie redirect
+		res.addCookie(cookie);
+
 	} 
 }

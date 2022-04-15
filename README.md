@@ -36,6 +36,11 @@
 	- **For servlets on different domains**
 		- Servlet ask browser to redirect request
 		- sendRedirect() methods used
+* Session management implements
+	- Session
+	- Cookies
+	- URL Redirecting
+* HttpSession Cookies
 
 	
 	
